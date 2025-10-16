@@ -145,102 +145,102 @@ const Projects = () => {
       </div>
 
       {/* Modal */}
-      {selectedProject && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-2 sm:p-4 animate-fadeIn"
-          onClick={closeModal}
+{selectedProject && (
+  <div
+    className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-2 sm:p-4 animate-fadeIn overflow-y-auto"
+    onClick={closeModal}
+  >
+    <div
+      className="bg-white rounded-lg w-full max-w-3xl sm:max-w-4xl relative p-4 sm:p-6 shadow-xl animate-scaleIn mx-auto my-8 sm:my-10"
+      onClick={(e) => e.stopPropagation()} // mencegah modal tertutup saat klik isi
+    >
+      {/* Tombol Close */}
+      <button
+        className="absolute top-3 right-3 text-gray-700 hover:text-red-600 text-2xl"
+        onClick={closeModal}
+      >
+        ✕
+      </button>
+
+      {/* Gambar + Navigasi */}
+      <div className="flex items-center justify-between">
+        <button
+          className="text-2xl p-2 text-gray-600 hover:text-black"
+          onClick={prevImage}
         >
-          <div
-            className="bg-white rounded-lg max-w-4xl w-full relative p-6 shadow-xl animate-scaleIn"
-            onClick={(e) => e.stopPropagation()} // ⛔ mencegah modal tertutup saat klik isi
-          >
-            {/* Close button */}
-            <button
-              className="absolute top-3 right-3 text-gray-700 hover:text-red-600 text-2xl"
-              onClick={closeModal}
-            >
-              ✕
-            </button>
+          ◀
+        </button>
+        <img
+          src={selectedProject.images[currentImg]}
+          alt={selectedProject.title}
+          className="w-full max-h-[55vh] sm:max-h-[70vh] object-contain rounded transition-transform duration-300"
+        />
+        <button
+          className="text-2xl p-2 text-gray-600 hover:text-black"
+          onClick={nextImage}
+        >
+          ▶
+        </button>
+      </div>
 
-            {/* Image Slider */}
-            <div className="flex items-center justify-between">
-              <button
-                className="text-2xl p-2 text-gray-600 hover:text-black"
-                onClick={prevImage}
-              >
-                ◀
-              </button>
-              <img
-                src={selectedProject.images[currentImg]}
-                alt={selectedProject.title}
-                className="w-full max-h-[70vh] object-contain rounded transition-transform duration-300"
-              />
-              <button
-                className="text-2xl p-2 text-gray-600 hover:text-black"
-                onClick={nextImage}
-              >
-                ▶
-              </button>
-            </div>
+      {/* Indikator Gambar */}
+      <div className="text-center text-sm text-gray-500 mt-2">
+        {currentImg + 1} / {selectedProject.images.length}
+      </div>
 
-            {/* Image Counter */}
-            <div className="text-center text-sm text-gray-500 mt-2">
-              {currentImg + 1} / {selectedProject.images.length}
-            </div>
+      {/* Detail Project */}
+      <div className="mt-5 sm:mt-6">
+        <h3 className="font-bold text-xl sm:text-2xl">{selectedProject.title}</h3>
+        <p className="text-gray-600 mt-2 text-sm sm:text-base">{selectedProject.desc}</p>
 
-            {/* Detail */}
-            <div className="mt-6">
-              <h3 className="font-bold text-2xl">{selectedProject.title}</h3>
-              <p className="text-gray-600 mt-2">{selectedProject.desc}</p>
+        <p className="mt-3 text-sm sm:text-base">
+          <span className="font-semibold">Role:</span>{" "}
+          {selectedProject.role}
+        </p>
 
-              <p className="mt-3">
-                <span className="font-semibold">Role:</span>{" "}
-                {selectedProject.role}
-              </p>
-
-              <div className="mt-3">
-                <span className="font-semibold">Features:</span>
-                <ul className="list-disc ml-6 mt-1 text-gray-700 text-sm">
-                  {selectedProject.functions?.map((f, idx) => (
-                    <li key={idx}>{f}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="mt-3 flex items-center space-x-2">
-                <span className="font-semibold">Stack:</span>
-                <div className="flex space-x-2">{selectedProject.icons}</div>
-              </div>
-
-              {/* Links */}
-              <div className="flex space-x-3 mt-6">
-                {selectedProject.github && (
-                  <a
-                    href={selectedProject.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition"
-                    title="GitHub"
-                  >
-                    <FaGithub className="text-lg" />
-                  </a>
-                )}
-                {selectedProject.demo && (
-                  <a
-                    href={selectedProject.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-blue-600 text-white rounded-full hover:bg-blue-500 transition"
-                    title="Live Demo"
-                  >
-                    <FaGlobe className="text-lg" />
-                  </a>
-                )}
-              </div>
-            </div>
-          </div>
+        <div className="mt-3">
+          <span className="font-semibold text-sm sm:text-base">Features:</span>
+          <ul className="list-disc ml-6 mt-1 text-gray-700 text-sm">
+            {selectedProject.functions?.map((f, idx) => (
+              <li key={idx}>{f}</li>
+            ))}
+          </ul>
         </div>
-      )}
+
+        <div className="mt-3 flex items-center space-x-2">
+          <span className="font-semibold text-sm sm:text-base">Stack:</span>
+          <div className="flex space-x-2">{selectedProject.icons}</div>
+        </div>
+
+        {/* Tautan */}
+        <div className="flex space-x-3 mt-6">
+          {selectedProject.github && (
+            <a
+              href={selectedProject.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition"
+              title="GitHub"
+            >
+              <FaGithub className="text-lg" />
+            </a>
+          )}
+          {selectedProject.demo && (
+            <a
+              href={selectedProject.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-blue-600 text-white rounded-full hover:bg-blue-500 transition"
+              title="Live Demo"
+            >
+              <FaGlobe className="text-lg" />
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+)}
     </Section>
   );
 };
