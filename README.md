@@ -1,12 +1,41 @@
-# React + Vite
+## 🌐 Live Demo
+Situs ini di-*deploy* secara otomatis melalui Netlify.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**[Lihat Web Portofolio Saya di Sini](sanisco.netlify.app)**
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Stack Teknologi
+Proyek ini dibangun menggunakan teknologi modern berikut:
 
-## Expanding the ESLint configuration
+* **Frontend Framework:** React.js
+* **Build Tool:** Vite
+* **Styling:** Tailwind CSS 
+* **Deployment:** Netlify
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Fitur Utama
+* **Desain Responsif:** Tampilan optimal di desktop, tablet, dan ponsel.
+* **Bagian Proyek:** Menampilkan studi kasus (case studies) terperinci untuk beberapa proyek utama.
+* **Halaman Kontak:** Formulir kontak yang berfungsi (jika ada).
+* **Animasi/Transisi:** Penggunaan library animasi modern (Framer Motion).
+
+## 💻 Instalasi Lokal (Jika Ingin Menjalankan di Komputer Anda)
+
+1.  Clone repositori ini:
+    ```bash
+    git clone [https://github.com/Sandysuryantiko/My-Personal-Website.git](https://github.com/Sandysuryantiko/My-Personal-Website.git)
+    ```
+2.  Masuk ke direktori proyek:
+    ```bash
+    cd My-Personal-Website
+    ```
+3.  Instal *dependencies*:
+    ```bash
+    npm install
+    # atau yarn install
+    ```
+4.  Jalankan proyek dalam mode pengembangan:
+    ```bash
+    npm run dev
+    # atau yarn dev
+    ```
