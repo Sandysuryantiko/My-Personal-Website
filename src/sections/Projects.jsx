@@ -151,8 +151,8 @@ const Projects = () => {
     onClick={closeModal}
   >
     <div
-      className="bg-white rounded-lg w-full max-w-3xl sm:max-w-4xl relative p-4 sm:p-6 shadow-xl animate-scaleIn mx-auto my-8 sm:my-10"
-      onClick={(e) => e.stopPropagation()} // mencegah modal tertutup saat klik isi
+      className="bg-white rounded-xl w-full max-w-3xl sm:max-w-4xl relative p-4 sm:p-6 shadow-2xl animate-scaleIn mx-auto my-8 sm:my-10"
+      onClick={(e) => e.stopPropagation()}
     >
       {/* Tombol Close */}
       <button
@@ -163,18 +163,22 @@ const Projects = () => {
       </button>
 
       {/* Gambar + Navigasi */}
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between gap-2">
         <button
           className="text-2xl p-2 text-gray-600 hover:text-black"
           onClick={prevImage}
         >
           ◀
         </button>
-        <img
-          src={selectedProject.images[currentImg]}
-          alt={selectedProject.title}
-          className="w-full max-h-[55vh] sm:max-h-[70vh] object-contain rounded transition-transform duration-300"
-        />
+
+        <div className="flex-1 flex justify-center items-center">
+          <img
+            src={selectedProject.images[currentImg]}
+            alt={selectedProject.title}
+            className="max-w-full max-h-[60vh] sm:max-h-[70vh] object-contain rounded-lg shadow-md border border-gray-200"
+          />
+        </div>
+
         <button
           className="text-2xl p-2 text-gray-600 hover:text-black"
           onClick={nextImage}
@@ -184,36 +188,40 @@ const Projects = () => {
       </div>
 
       {/* Indikator Gambar */}
-      <div className="text-center text-sm text-gray-500 mt-2">
+      <div className="text-center text-sm text-gray-500 mt-3">
         {currentImg + 1} / {selectedProject.images.length}
       </div>
 
       {/* Detail Project */}
       <div className="mt-5 sm:mt-6">
-        <h3 className="font-bold text-xl sm:text-2xl">{selectedProject.title}</h3>
-        <p className="text-gray-600 mt-2 text-sm sm:text-base">{selectedProject.desc}</p>
+        <h3 className="font-bold text-xl sm:text-2xl text-gray-800 text-center sm:text-left">
+          {selectedProject.title}
+        </h3>
+        <p className="text-gray-600 mt-2 text-sm sm:text-base text-center sm:text-left">
+          {selectedProject.desc}
+        </p>
 
-        <p className="mt-3 text-sm sm:text-base">
+        <p className="mt-3 text-sm sm:text-base text-center sm:text-left">
           <span className="font-semibold">Role:</span>{" "}
           {selectedProject.role}
         </p>
 
         <div className="mt-3">
-          <span className="font-semibold text-sm sm:text-base">Features:</span>
-          <ul className="list-disc ml-6 mt-1 text-gray-700 text-sm">
+          <span className="font-semibold text-sm sm:text-base block text-center sm:text-left">Features:</span>
+          <ul className="list-disc ml-6 mt-1 text-gray-700 text-sm text-left">
             {selectedProject.functions?.map((f, idx) => (
               <li key={idx}>{f}</li>
             ))}
           </ul>
         </div>
 
-        <div className="mt-3 flex items-center space-x-2">
+        <div className="mt-3 flex flex-col sm:flex-row items-center sm:items-start sm:space-x-2 text-center sm:text-left">
           <span className="font-semibold text-sm sm:text-base">Stack:</span>
-          <div className="flex space-x-2">{selectedProject.icons}</div>
+          <div className="flex space-x-2 mt-2 sm:mt-0">{selectedProject.icons}</div>
         </div>
 
         {/* Tautan */}
-        <div className="flex space-x-3 mt-6">
+        <div className="flex justify-center sm:justify-start space-x-3 mt-6">
           {selectedProject.github && (
             <a
               href={selectedProject.github}
