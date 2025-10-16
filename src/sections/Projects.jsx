@@ -194,34 +194,34 @@ const Projects = () => {
 
       {/* Detail Project */}
       <div className="mt-5 sm:mt-6">
-        <h3 className="font-bold text-xl sm:text-2xl text-gray-800 text-center sm:text-left">
+        <h3 className="font-bold text-xl sm:text-2xl text-gray-800 text-justify sm:text-left">
           {selectedProject.title}
         </h3>
-        <p className="text-gray-600 mt-2 text-sm sm:text-base text-center sm:text-left">
+        <p className="text-gray-600 mt-2 text-sm sm:text-base text-justify sm:text-left">
           {selectedProject.desc}
         </p>
 
-        <p className="mt-3 text-sm sm:text-base text-center sm:text-left">
+        <p className="mt-3 text-sm sm:text-base text-justify sm:text-left">
           <span className="font-semibold">Role:</span>{" "}
           {selectedProject.role}
         </p>
 
         <div className="mt-3">
-          <span className="font-semibold text-sm sm:text-base block text-center sm:text-left">Features:</span>
-          <ul className="list-disc ml-6 mt-1 text-gray-700 text-sm text-left">
+          <span className="font-semibold text-sm sm:text-base block text-justify sm:text-left">Features:</span>
+          <ul className="list-disc ml-6 mt-1 text-gray-700 text-sm text-justify">
             {selectedProject.functions?.map((f, idx) => (
               <li key={idx}>{f}</li>
             ))}
           </ul>
         </div>
 
-        <div className="mt-3 flex flex-col sm:flex-row items-center sm:items-start sm:space-x-2 text-center sm:text-left">
+        <div className="mt-3 flex flex-col sm:flex-row items-justify sm:items-start sm:space-x-2 text-justify sm:text-left">
           <span className="font-semibold text-sm sm:text-base">Stack:</span>
           <div className="flex space-x-2 mt-2 sm:mt-0">{selectedProject.icons}</div>
         </div>
 
         {/* Tautan */}
-        <div className="flex justify-center sm:justify-start space-x-3 mt-6">
+        <div className="flex justify sm:justify-start space-x-3 mt-6">
           {selectedProject.github && (
             <a
               href={selectedProject.github}
