@@ -1,7 +1,7 @@
 ## 🌐 Live Demo
 Situs ini di-*deploy* secara otomatis melalui Netlify.
 
-**[Lihat Web Portofolio Saya di Sini](sanisco.netlify.app)**
+**[Lihat Web Portofolio Saya di Sini](https://sanisco.netlify.app)**
 
 ---
 
