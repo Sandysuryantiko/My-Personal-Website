@@ -18,24 +18,3 @@ Proyek ini dibangun menggunakan teknologi modern berikut:
 * **Bagian Proyek:** Menampilkan studi kasus (case studies) terperinci untuk beberapa proyek utama.
 * **Halaman Kontak:** Formulir kontak yang berfungsi (jika ada).
 * **Animasi/Transisi:** Penggunaan library animasi modern (Framer Motion).
-
-## 💻 Instalasi Lokal (Jika Ingin Menjalankan di Komputer Anda)
-
-1.  Clone repositori ini:
-    ```bash
-    git clone [https://github.com/Sandysuryantiko/My-Personal-Website.git](https://github.com/Sandysuryantiko/My-Personal-Website.git)
-    ```
-2.  Masuk ke direktori proyek:
-    ```bash
-    cd My-Personal-Website
-    ```
-3.  Instal *dependencies*:
-    ```bash
-    npm install
-    # atau yarn install
-    ```
-4.  Jalankan proyek dalam mode pengembangan:
-    ```bash
-    npm run dev
-    # atau yarn dev
-    ```
