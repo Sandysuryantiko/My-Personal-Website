@@ -154,11 +154,16 @@ const Projects = () => {
       {/* MODAL */}
       {selectedProject && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4 overflow-y-auto"
+          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-2 sm:p-4"
           onClick={closeModal}
         >
           <div
-            className="bg-white rounded-xl max-w-4xl w-full p-6 relative shadow-2xl"
+            className="
+        bg-white rounded-xl w-full 
+        max-w-lg sm:max-w-2xl lg:max-w-4xl
+        max-h-[90vh] overflow-y-auto
+        p-4 sm:p-6 relative shadow-2xl
+      "
             onClick={(e) => e.stopPropagation()}
           >
             {/* CLOSE */}
@@ -170,33 +175,44 @@ const Projects = () => {
             </button>
 
             {/* IMAGE */}
-            <div className="flex items-center justify-between">
-              <button onClick={prevImage}>◀</button>
+            <div className="flex items-center justify-between gap-2">
+              <button onClick={prevImage} className="text-lg sm:text-2xl px-2">
+                ◀
+              </button>
 
               <img
                 src={selectedProject.images[currentImg]}
                 alt=""
-                className="max-h-[60vh] object-contain rounded-lg"
+                className="
+            max-h-[200px] sm:max-h-[400px] 
+            object-contain rounded-lg
+          "
               />
 
-              <button onClick={nextImage}>▶</button>
+              <button onClick={nextImage} className="text-lg sm:text-2xl px-2">
+                ▶
+              </button>
             </div>
 
-            <p className="text-center text-sm mt-2">
+            <p className="text-center text-xs sm:text-sm mt-2">
               {currentImg + 1} / {selectedProject.images.length}
             </p>
 
             {/* DETAIL */}
-            <div className="mt-5">
-              <h3 className="text-2xl font-bold">{selectedProject.title}</h3>
+            <div className="mt-4">
+              <h3 className="text-lg sm:text-2xl font-bold">
+                {selectedProject.title}
+              </h3>
 
-              <p className="text-gray-600 mt-2">{selectedProject.desc}</p>
+              <p className="text-gray-600 mt-2 text-sm sm:text-base">
+                {selectedProject.desc}
+              </p>
 
-              <p className="mt-3">
+              <p className="mt-2 text-sm sm:text-base">
                 <b>Role:</b> {selectedProject.role}
               </p>
 
-              <ul className="list-disc ml-6 mt-2 text-gray-700">
+              <ul className="list-disc ml-5 mt-2 text-gray-700 text-sm">
                 {selectedProject.functions?.map((f, i) => (
                   <li key={i}>{f}</li>
                 ))}
@@ -205,13 +221,13 @@ const Projects = () => {
               <div className="flex space-x-2 mt-3">{selectedProject.icons}</div>
 
               {/* LINK */}
-              <div className="flex space-x-3 mt-6">
+              <div className="flex space-x-3 mt-5">
                 {selectedProject.github && (
                   <a
                     href={selectedProject.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-3 bg-gray-800 text-white rounded-full"
+                    className="p-2 sm:p-3 bg-gray-800 text-white rounded-full"
                   >
                     <FaGithub />
                   </a>
@@ -222,7 +238,7 @@ const Projects = () => {
                     href={selectedProject.demo}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-3 bg-blue-600 text-white rounded-full"
+                    className="p-2 sm:p-3 bg-blue-600 text-white rounded-full"
                   >
                     <FaGlobe />
                   </a>
