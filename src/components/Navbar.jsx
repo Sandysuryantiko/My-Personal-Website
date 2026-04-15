@@ -29,7 +29,14 @@ const Navbar = () => {
   }, []);
 
   // Hapus "Contact" dari daftar navLinks
-  const navLinks = ["About", "Skills", "Experience", "Projects"];
+  const navLinks = [
+    "About",
+    "Skills",
+    "Education",
+    "Experience",
+    "Projects",
+    "Contact",
+  ];
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow z-50">

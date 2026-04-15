@@ -7,6 +7,7 @@ import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
 import Footer from "./components/Footer";
+import Education from "./sections/Education";
 function App() {
   return (
     <div>
@@ -14,10 +15,11 @@ function App() {
       <main className="pt-20">
         <Hero />
         <Skills />
+        <Education />
         <Experience />
         <Projects />
         <Contact />
-        <Footer/>
+        <Footer />
       </main>
     </div>
   );
