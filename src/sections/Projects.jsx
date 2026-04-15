@@ -145,17 +145,20 @@ const Projects = () => {
 
       {selectedProject && (
         <div
-          className="fixed inset-0 bg-black/60 flex items-end sm:items-center justify-center z-50"
+          className="fixed inset-0 z-50 flex items-end sm:items-center justify-center overflow-hidden"
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
           onClick={closeModal}
         >
           <div
-            className="bg-white w-full sm:rounded-xl sm:max-w-xl lg:max-w-3xl rounded-t-2xl max-h-[92vh] sm:max-h-[88vh] overflow-y-auto relative flex flex-col"
+            className="relative flex flex-col bg-white rounded-t-2xl sm:rounded-xl w-full sm:w-auto sm:mx-4 sm:max-w-xl lg:max-w-3xl max-h-[92vh] sm:max-h-[88vh] overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex justify-center pt-3 pb-1 sm:hidden">
+            {/* Handle bar mobile */}
+            <div className="flex justify-center pt-3 pb-1 sm:hidden flex-shrink-0">
               <div className="w-10 h-1 rounded-full bg-gray-300" />
             </div>
 
+            {/* Close button */}
             <button
               onClick={closeModal}
               className="absolute top-3 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-red-100 hover:text-red-600 text-gray-500 text-sm transition-colors z-10"
@@ -163,84 +166,93 @@ const Projects = () => {
               X
             </button>
 
-            <div className="relative bg-gray-50 w-full">
-              <div className="flex items-center justify-between px-2 py-3">
-                <button
-                  onClick={prevImage}
-                  className="w-8 h-8 flex items-center justify-center rounded-full bg-white shadow text-gray-600 hover:bg-gray-100 flex-shrink-0"
-                >
-                  {"<"}
-                </button>
-                <img
-                  src={selectedProject.images[currentImg]}
-                  alt={selectedProject.title}
-                  className="h-40 sm:h-64 object-contain rounded-lg mx-auto"
-                />
-                <button
-                  onClick={nextImage}
-                  className="w-8 h-8 flex items-center justify-center rounded-full bg-white shadow text-gray-600 hover:bg-gray-100 flex-shrink-0"
-                >
-                  {">"}
-                </button>
+            {/* Scrollable area */}
+            <div className="overflow-y-auto overflow-x-hidden flex-1 w-full">
+              {/* Image slider */}
+              <div className="bg-gray-50 w-full">
+                <div className="flex items-center justify-between px-2 py-3">
+                  <button
+                    onClick={prevImage}
+                    className="w-8 h-8 flex items-center justify-center rounded-full bg-white shadow text-gray-600 hover:bg-gray-100 flex-shrink-0"
+                  >
+                    {"<"}
+                  </button>
+                  <div className="flex-1 flex items-center justify-center px-2 min-w-0">
+                    <img
+                      src={selectedProject.images[currentImg]}
+                      alt={selectedProject.title}
+                      className="h-40 sm:h-64 max-w-full w-auto object-contain rounded-lg"
+                    />
+                  </div>
+                  <button
+                    onClick={nextImage}
+                    className="w-8 h-8 flex items-center justify-center rounded-full bg-white shadow text-gray-600 hover:bg-gray-100 flex-shrink-0"
+                  >
+                    {">"}
+                  </button>
+                </div>
+                {selectedProject.images.length > 1 && (
+                  <p className="text-center text-xs text-gray-400 pb-2">
+                    {currentImg + 1} / {selectedProject.images.length}
+                  </p>
+                )}
               </div>
-              {selectedProject.images.length > 1 && (
-                <p className="text-center text-xs text-gray-400 pb-2">
-                  {currentImg + 1} / {selectedProject.images.length}
-                </p>
-              )}
-            </div>
 
-            <div className="p-4 sm:p-6">
-              <h3 className="text-base sm:text-xl font-bold text-gray-800 leading-snug">
-                {selectedProject.title}
-              </h3>
-              <span className="inline-block mt-2 text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded-full font-medium">
-                {selectedProject.role}
-              </span>
-              <p className="text-gray-600 mt-3 text-sm sm:text-base">
-                {selectedProject.desc}
-              </p>
-              <div className="mt-4">
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">
-                  Highlights
+              {/* Detail content */}
+              <div className="p-4 sm:p-6">
+                <h3 className="text-base sm:text-xl font-bold text-gray-800 leading-snug">
+                  {selectedProject.title}
+                </h3>
+                <span className="inline-block mt-2 text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded-full font-medium">
+                  {selectedProject.role}
+                </span>
+                <p className="text-gray-600 mt-3 text-sm sm:text-base">
+                  {selectedProject.desc}
                 </p>
-                <ul className="space-y-1">
-                  {selectedProject.functions?.map((f, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-start gap-2 text-sm text-gray-700"
-                    >
-                      <span className="mt-1 w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0" />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="flex items-center gap-3 mt-5 pt-4 border-t border-gray-100">
-                <div className="flex gap-2 flex-1">{selectedProject.icons}</div>
-                <div className="flex gap-2">
-                  {selectedProject.github && (
-                    <a
-                      href={selectedProject.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-1.5 px-3 py-2 bg-gray-800 text-white text-xs rounded-lg hover:bg-gray-700 transition-colors"
-                    >
-                      <FaGithub />
-                      <span>GitHub</span>
-                    </a>
-                  )}
-                  {selectedProject.demo && (
-                    <a
-                      href={selectedProject.demo}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-1.5 px-3 py-2 bg-blue-600 text-white text-xs rounded-lg hover:bg-blue-700 transition-colors"
-                    >
-                      <FaGlobe />
-                      <span>Demo</span>
-                    </a>
-                  )}
+                <div className="mt-4">
+                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">
+                    Highlights
+                  </p>
+                  <ul className="space-y-1">
+                    {selectedProject.functions?.map((f, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-start gap-2 text-sm text-gray-700"
+                      >
+                        <span className="mt-1 w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="flex items-center gap-3 mt-5 pt-4 border-t border-gray-100">
+                  <div className="flex gap-2 flex-1">
+                    {selectedProject.icons}
+                  </div>
+                  <div className="flex gap-2">
+                    {selectedProject.github && (
+                      <a
+                        href={selectedProject.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center gap-1.5 px-3 py-2 bg-gray-800 text-white text-xs rounded-lg hover:bg-gray-700 transition-colors"
+                      >
+                        <FaGithub />
+                        <span>GitHub</span>
+                      </a>
+                    )}
+                    {selectedProject.demo && (
+                      <a
+                        href={selectedProject.demo}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center gap-1.5 px-3 py-2 bg-blue-600 text-white text-xs rounded-lg hover:bg-blue-700 transition-colors"
+                      >
+                        <FaGlobe />
+                        <span>Demo</span>
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
