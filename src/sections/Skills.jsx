@@ -1,53 +1,129 @@
 import React from "react";
 import Section from "../components/Section";
+import { FaNetworkWired, FaTools, FaPhp, FaPython } from "react-icons/fa";
+
 import {
-  FaJs,
-  FaReact,
-  FaNodeJs,
-  FaDatabase,
-  FaPhp,
-  FaNetworkWired,
-  FaTools,
-} from "react-icons/fa";
-import { SiTailwindcss, SiMysql, SiLaravel, SiNetlify, SiGithub, SiMikrotik, SiGit, SiNginx, SiVuedotjs, SiNextdotjs } from "react-icons/si";
-import { FaFlutter } from "react-icons/fa6";
+  SiMysql,
+  SiTailwindcss,
+  SiGit,
+  SiWireshark,
+  SiCisco,
+} from "react-icons/si";
 
-const skills = [
-  { name: "JavaScript", icon: <FaJs className="text-yellow-500 text-3xl" /> },
-  { name: "React.js", icon: <FaReact className="text-blue-500 text-3xl" /> },
-  { name: "Node.js", icon: <FaNodeJs className="text-green-600 text-3xl" /> },
-  { name: "TailwindCSS", icon: <SiTailwindcss className="text-sky-500 text-3xl" /> },
-  { name: "MySQL", icon: <SiMysql className="text-blue-700 text-3xl" /> },
-  { name: "Netlify", icon: <SiNetlify className="text-teal-400 text-3xl" /> },
-
-  // tambahan baru
-  { name: "PHP", icon: <FaPhp className="text-indigo-600 text-3xl" /> },
-  { name: "Laravel", icon: <SiLaravel className="text-red-600 text-3xl" /> },
-  { name: "Networking", icon: <FaNetworkWired className="text-teal-600 text-3xl" /> },
-  { name: "GitHub", icon: <SiGithub className="text-gray-700 text-3xl" /> },
-  { name: "Next.js", icon: <SiNextdotjs className="text-black-700 text-3xl" /> },
-  { name: "Git", icon: <SiGit className="text-red-700 text-3xl" /> },
-  { name: "Nginx", icon: <SiNginx className="text-green-700 text-3xl" /> },
-  { name: "Vue.js", icon: <SiVuedotjs className="text-green-700 text-3xl" /> },
+const skillCategories = [
+  {
+    title: "Networking",
+    skills: [
+      {
+        name: "Subnetting",
+        icon: <FaNetworkWired className="text-teal-600 text-3xl" />,
+      },
+      {
+        name: "VLAN",
+        icon: <FaNetworkWired className="text-teal-600 text-3xl" />,
+      },
+      {
+        name: "Routing",
+        icon: <FaNetworkWired className="text-teal-600 text-3xl" />,
+      },
+      {
+        name: "NAT",
+        icon: <FaNetworkWired className="text-teal-600 text-3xl" />,
+      },
+      {
+        name: "ACL",
+        icon: <FaNetworkWired className="text-teal-600 text-3xl" />,
+      },
+      {
+        name: "Security",
+        icon: <FaNetworkWired className="text-teal-600 text-3xl" />,
+      },
+    ],
+  },
+  {
+    title: "IT Support",
+    skills: [
+      {
+        name: "Troubleshooting",
+        icon: <FaTools className="text-gray-600 text-3xl" />,
+      },
+      {
+        name: "Windows Installation",
+        icon: <FaTools className="text-gray-600 text-3xl" />,
+      },
+      {
+        name: "Hardware Support",
+        icon: <FaTools className="text-gray-600 text-3xl" />,
+      },
+      {
+        name: "Basic Linux",
+        icon: <FaTools className="text-gray-600 text-3xl" />,
+      },
+    ],
+  },
+  {
+    title: "Tools",
+    skills: [
+      {
+        name: "Cisco Packet Tracer",
+        icon: <SiCisco className="text-blue-600 text-3xl" />,
+      },
+      {
+        name: "Wireshark",
+        icon: <SiWireshark className="text-blue-500 text-3xl" />,
+      },
+      { name: "PuTTY", icon: <FaTools className="text-gray-600 text-3xl" /> },
+      { name: "Git", icon: <SiGit className="text-red-600 text-3xl" /> },
+    ],
+  },
+  {
+    title: "Programming",
+    skills: [
+      { name: "PHP", icon: <FaPhp className="text-indigo-600 text-3xl" /> },
+      { name: "MySQL", icon: <SiMysql className="text-blue-700 text-3xl" /> },
+      {
+        name: "TailwindCSS",
+        icon: <SiTailwindcss className="text-indigo-600 text-3xl" />,
+      },
+      {
+        name: "Python",
+        icon: <FaPython className="text-yellow blue-700 text-3xl" />,
+      },
+    ],
+  },
 ];
 
 const Skills = () => {
   return (
     <Section id="skills" title="Skills">
-      {/* wrapper card biar sama dengan Hero */}
       <div className="max-w-5xl mx-auto bg-white rounded-xl shadow-lg p-8">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-          {skills.map((skill, i) => (
-            <div
-              key={i}
-              className="p-6 bg-gray-50 rounded-xl shadow text-center font-regular text-gray-700 
-                        hover:shadow-lg hover:scale-105 transform transition duration-300 flex flex-col items-center"
-            >
-              {skill.icon}
-              <span className="mt-2">{skill.name}</span>
+        {/* Subheading */}
+        <p className="text-center text-gray-600 mb-8">
+          Focused on Networking, IT Support, and System Troubleshooting
+        </p>
+
+        {skillCategories.map((category, index) => (
+          <div key={index} className="mb-8">
+            {/* Category Title */}
+            <h3 className="text-lg font-semibold text-gray-800 mb-4">
+              {category.title}
+            </h3>
+
+            {/* Skills Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
+              {category.skills.map((skill, i) => (
+                <div
+                  key={i}
+                  className="p-5 bg-gray-50 rounded-xl shadow text-center text-gray-700 
+                  hover:shadow-lg hover:scale-105 transform transition duration-300 flex flex-col items-center"
+                >
+                  {skill.icon}
+                  <span className="mt-2 text-sm">{skill.name}</span>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </Section>
   );

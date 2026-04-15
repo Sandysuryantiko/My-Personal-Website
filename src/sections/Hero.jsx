@@ -6,7 +6,6 @@ const Hero = () => {
   return (
     <section id="about" className="flex justify-center px-4 py-12">
       <div className="bg-white rounded-xl shadow-lg p-6 md:p-10 max-w-5xl w-full flex flex-col md:flex-row items-center md:items-start gap-10">
-        
         {/* Foto + Sosmed */}
         <div className="flex flex-col items-center order-1 md:order-2">
           {/* Foto dengan efek zoom */}
@@ -52,38 +51,42 @@ const Hero = () => {
 
           {/* Subjudul */}
           <h2 className="text-lg md:text-xl tracking-wide font-semibold text-gray-700 mb-5">
-            <b>Frontend Developer</b>
+            <b>IT Support | Network Infrastructure</b>
           </h2>
-          
+
           {/* Deskripsi */}
           <p className="text-gray-600 mb-6 leading-relaxed text-justify">
-            Hello, I am Sandy Suryantiko, 
-            an Frontend Developer with strong expertise in Programming and Networking, 
-            focused on building efficient systems and scalable applications. 
-            I enjoy exploring new technologies to create solutions that are both 
-            innovative and reliable.
+            I am a Bachelor of Informatics Engineering graduate with a strong
+            interest in IT Support and Networking. Currently, I am developing my
+            skills in computer networking, troubleshooting, and IT system
+            operations.
           </p>
 
           <p className="text-gray-600 mb-6 leading-relaxed text-justify">
-            Beyond technical skills, I bring problem-solving ability and a proactive 
-            mindset to every project. Whether developing applications or optimizing 
-            networks, my goal is to deliver impactful solutions that support users 
-            and organizational growth.
+            With 8 years of experience in a production environment, I am
+            accustomed to problem-solving, working under pressure, and handling
+            real-world operational challenges. I have a basic understanding of
+            networking concepts such as IP Addressing, Subnetting, VLAN, and
+            basic configuration using Cisco Packet Tracer. I am also experienced
+            in operating system installation and basic hardware/software
+            troubleshooting. I am highly motivated to continuously learn and
+            grow in the IT field, especially as an IT Support, NOC Engineer, or
+            Network Engineer.
           </p>
 
           {/* Tombol */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a
-              href="mailto:sandysuryantiko@gmail.com"
+              href="mailto:sandyscoproject@gmail.com"
               className="px-6 py-3 bg-gray-800 text-white rounded-lg font-semibold hover:bg-gray-700 transition"
             >
               Contact Me
             </a>
             <a
-              href="mailto:sandysuryantiko@gmail.com"
+              href="mailto:sandyscoproject@gmail.com"
               className="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-500 transition"
             >
-              Hire Me on Upwork
+              Open to Opportunites
             </a>
           </div>
         </div>
