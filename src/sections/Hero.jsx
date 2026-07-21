@@ -56,37 +56,35 @@ const Hero = () => {
 
           {/* Deskripsi */}
           <p className="text-gray-600 mb-6 leading-relaxed text-justify">
-            I am a Bachelor of Informatics Engineering graduate with a strong
-            interest in IT Support and Networking. Currently, I am developing my
-            skills in computer networking, troubleshooting, and IT system
-            operations.
+            I am a Bachelor of Informatics Engineering graduate specializing in
+            IT Support, Network Infrastructure, and System Administration.
+            Hands-on experience in managing enterprise IT operations, including
+            Active Directory user and permission management, network firewall
+            configuration using Kerio Control, and secure site-to-site/remote
+            VPN access.
           </p>
 
           <p className="text-gray-600 mb-6 leading-relaxed text-justify">
-            With 8 years of experience in a production environment, I am
-            accustomed to problem-solving, working under pressure, and handling
-            real-world operational challenges. I have a basic understanding of
-            networking concepts such as IP Addressing, Subnetting, VLAN, and
-            basic configuration using Cisco Packet Tracer. I am also experienced
-            in operating system installation and basic hardware/software
-            troubleshooting. I am highly motivated to continuously learn and
-            grow in the IT field, especially as an IT Support, NOC Engineer, or
-            Network Engineer.
+            Proficient in configuring Print Servers, implementing reliable ERP
+            server backups, and managing network-attached storage via Synology
+            NAS. Skilled in network infrastructure management (VLAN, Subnetting,
+            Routing) along with end-user hardware, software, and system
+            troubleshooting to ensure maximum uptime and operational efficiency.
           </p>
 
           {/* Tombol */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a
               href="mailto:sandyscoproject@gmail.com"
-              className="px-6 py-3 bg-gray-800 text-white rounded-lg font-semibold hover:bg-gray-700 transition"
+              className="px-6 py-3 bg-gray-800 text-white rounded-lg font-semibold hover:bg-gray-700 transition text-center"
             >
               Contact Me
             </a>
             <a
-              href="mailto:sandyscoproject@gmail.com"
-              className="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-500 transition"
+              href="#projects"
+              className="px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition text-center"
             >
-              Open to Opportunites
+              View Projects
             </a>
           </div>
         </div>

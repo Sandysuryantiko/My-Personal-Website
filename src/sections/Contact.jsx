@@ -4,24 +4,34 @@ import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <Section id="contact" title="Contact">
-      <div className="text-center max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg">
-        <p className="text-gray-600 mb-6">
-          I am currently open to opportunities as an IT Support, Network
-          Engineer, or Junior IT role. If you are looking for someone who is
-          passionate about networking, troubleshooting, and system support, feel
-          free to reach out.
+    <Section id="contact" title="Get In Touch">
+      <div className="max-w-2xl mx-auto bg-white p-6 sm:p-10 rounded-2xl shadow-lg border border-gray-100 text-center">
+        {/* Header/Title */}
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3">
+          Let's Work Together!
+        </h3>
+
+        {/* Intro Paragraph */}
+        <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-8 max-w-lg mx-auto">
+          I am currently open to opportunities as an{" "}
+          <span className="font-semibold text-gray-800">IT Support</span>,{" "}
+          <span className="font-semibold text-gray-800">Network Engineer</span>,
+          or{" "}
+          <span className="font-semibold text-gray-800">
+            System Administrator
+          </span>
+          . Feel free to connect with me through any of the platforms below!
         </p>
 
-        {/* BUTTONS */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        {/* Action Buttons */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           {/* EMAIL */}
           <a
             href="mailto:sandyscoproject@gmail.com"
-            className="flex items-center justify-center gap-2 px-6 py-3 bg-gray-800 text-white rounded-lg font-semibold hover:bg-gray-700 transition"
+            className="flex items-center justify-center gap-2 px-5 py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs sm:text-sm font-semibold shadow-sm hover:shadow-md transition-all active:scale-95"
           >
-            <FaEnvelope />
-            Email Me
+            <FaEnvelope className="text-base" />
+            <span>Email Me</span>
           </a>
 
           {/* LINKEDIN */}
@@ -29,10 +39,10 @@ const Contact = () => {
             href="https://linkedin.com/in/Sandysuryantiko"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition"
+            className="flex items-center justify-center gap-2 px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs sm:text-sm font-semibold shadow-sm hover:shadow-md transition-all active:scale-95"
           >
-            <FaLinkedin />
-            LinkedIn
+            <FaLinkedin className="text-base" />
+            <span>LinkedIn</span>
           </a>
 
           {/* GITHUB */}
@@ -40,10 +50,10 @@ const Contact = () => {
             href="https://github.com/Sandysuryantiko"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-lg font-semibold hover:bg-black transition"
+            className="flex items-center justify-center gap-2 px-5 py-3 bg-gray-900 hover:bg-black text-white rounded-xl text-xs sm:text-sm font-semibold shadow-sm hover:shadow-md transition-all active:scale-95"
           >
-            <FaGithub />
-            GitHub
+            <FaGithub className="text-base" />
+            <span>GitHub</span>
           </a>
         </div>
       </div>

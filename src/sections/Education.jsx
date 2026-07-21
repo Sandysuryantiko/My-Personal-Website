@@ -6,23 +6,26 @@ const educationData = [
   {
     title: "Bachelor of Informatics Engineering",
     place: "Institut Teknologi dan Bisnis Bina Sarana Global",
+    year: "Graduated",
     icon: <FaGraduationCap className="text-blue-600 text-2xl" />,
     description:
-      "Focused on software development, system analysis, and basic networking concepts.",
+      "Specialized in software development, computer networks, system administration, and database management.",
   },
   {
     title: "CCNA Bootcamp",
-    place: "Course Net Indonesia",
-    icon: <FaCertificate className="text-green-600 text-2xl" />,
+    place: "Course-Net Indonesia",
+    year: "Certified / Completed",
+    icon: <FaCertificate className="text-emerald-600 text-2xl" />,
     description:
-      "Hands-on training covering VLAN, IP Addressing, Subnetting, Routing (OSPF), NAT, DHCP, and network troubleshooting using Cisco Packet Tracer.",
+      "Hands-on intensive training covering VLAN configuration, IP Addressing, Subnetting (VLSM), Routing Protocols (OSPF), NAT, ACL, DHCP, and enterprise network troubleshooting using Cisco Packet Tracer.",
   },
   {
-    title: "Self Learning & Practice",
-    place: "Independent Study",
+    title: "System & Network Administration Practice",
+    place: "Independent Study & Hands-on Lab",
+    year: "Continuous",
     icon: <FaCertificate className="text-gray-600 text-2xl" />,
     description:
-      "Practicing network configuration, troubleshooting scenarios, and system installation to strengthen IT Support and Networking skills.",
+      "Practicing real-world enterprise IT deployment including Active Directory management, firewall setup (Kerio Control), VPN implementation, NAS configuration, and server backup strategies.",
   },
 ];
 
@@ -34,15 +37,24 @@ const Education = () => {
           {educationData.map((item, index) => (
             <div
               key={index}
-              className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition"
+              className="flex items-start gap-4 p-5 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition duration-300"
             >
-              <div>{item.icon}</div>
-              <div>
-                <h3 className="font-semibold text-lg text-gray-800">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-gray-500">{item.place}</p>
-                <p className="text-gray-600 mt-1 text-sm">{item.description}</p>
+              <div className="mt-1">{item.icon}</div>
+              <div className="flex-1">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                  <h3 className="font-semibold text-lg text-gray-800">
+                    {item.title}
+                  </h3>
+                  <span className="text-xs font-medium bg-gray-200 text-gray-700 px-2.5 py-1 rounded-full w-fit">
+                    {item.year}
+                  </span>
+                </div>
+                <p className="text-sm font-medium text-gray-500 mt-0.5">
+                  {item.place}
+                </p>
+                <p className="text-gray-600 mt-2 text-sm leading-relaxed">
+                  {item.description}
+                </p>
               </div>
             </div>
           ))}
