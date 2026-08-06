@@ -7,8 +7,17 @@ import {
   FaNetworkWired,
   FaTools,
   FaTimes,
+  FaUsers,
 } from "react-icons/fa";
-import { SiHtml5 } from "react-icons/si";
+import {
+  SiHtml5,
+  SiPhp,
+  SiTailwindcss,
+  SiCss3,
+  SiJavascript,
+  SiMysql,
+  SiBootstrap,
+} from "react-icons/si";
 
 // Import Swiper React components & styles
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -35,6 +44,19 @@ import comp2 from "../assets/img/comp2.PNG";
 import comp3 from "../assets/img/comp3.PNG";
 import comp4 from "../assets/img/comp4.PNG";
 import comp5 from "../assets/img/comp5.png";
+import biz1 from "../assets/img/biz1.PNG";
+import biz2 from "../assets/img/biz2.PNG";
+import biz3 from "../assets/img/biz3.PNG";
+import biz4 from "../assets/img/biz4.PNG";
+import kasrt1 from "../assets/img/kasrt1.PNG";
+import kasrt2 from "../assets/img/kasrt2.PNG";
+import kasrt3 from "../assets/img/kasrt3.PNG";
+import kasrt4 from "../assets/img/kasrt4.PNG";
+import kasrt5 from "../assets/img/kasrt5.PNG";
+import kasrt6 from "../assets/img/kasrt6.PNG";
+import kasrt7 from "../assets/img/kasrt7.PNG";
+import kasrt8 from "../assets/img/kasrt8.PNG";
+import kasrt9 from "../assets/img/kasrt9.PNG";
 
 const projects = [
   {
@@ -66,7 +88,12 @@ const projects = [
     ],
     images: [help1, help2, help3, help4, help5, help6, help7, help8, help9],
     tech: ["PHP", "Tailwind CSS", "MySQL"],
-    icons: [<FaTools key="tools" className="text-gray-600 text-xl" />],
+    icons: [
+      <SiPhp key="php" className="text-indigo-500 text-xl" />,
+      <SiMysql key="mysql" className="text-blue-500 text-xl" />,
+      <SiTailwindcss key="tailwind" className="text-sky-500 text-xl" />,
+    ],
+
     github: "",
     demo: "",
   },
@@ -82,25 +109,79 @@ const projects = [
     ],
     images: [comp1, comp2, comp3, comp4, comp5],
     tech: ["HTML5", "CSS3", "JavaScript"],
-    icons: [<SiHtml5 key="html" className="text-orange-500 text-xl" />],
+    icons: [
+      <SiHtml5 key="html" className="text-orange-500 text-xl" />,
+      <SiCss3 key="css" className="text-blue-500 text-xl" />,
+      <SiJavascript key="js" className="text-yellow-500 text-xl" />,
+    ],
     github: "https://github.com/Sandysuryantiko/Company-Profile-Website",
     demo: "https://tbabdulfatah.netlify.app",
   },
   {
-    title: "Network Troubleshooting Case Study",
-    desc: "Solved complex network connectivity issues in a simulated enterprise environment.",
+    title: "Enterprise Network Mapping & Failover Simulation (Multi-Site VPN)",
+    desc: "Designed and simulated a multi-site enterprise network mapping the current infrastructure at my workplace, connecting a branch office to Head Office through a GRE Tunnel VPN with dual-ISP failover.",
     role: "IT Support",
     functions: [
-      "Diagnosed & fixed DHCP IP pool exhaustion issues",
-      "Corrected faulty NAT overload configurations",
-      "Resolved misconfigured Inter-VLAN communication",
+      "Mapped real office network topology (Branch – ISP Cloud – Head Office)",
+      "Configured GRE Tunnel VPN as a private IP path for ERP access",
+      "Segmented users into public internet access vs. private ERP (VPN) access",
+      "Simulated dual-ISP failover (primary & backup ISP) for WAN redundancy",
+      "Configured Head Office server segment (AD/Domain, Kerio, NAS, Synology, isolated ERP server)",
+      "Documented WAN link addressing, tunnel network, and gateway configuration",
     ],
-    images: [network0, network1, network2, network3],
-    tech: ["Troubleshooting", "Packet Tracer", "Subnetting"],
+    images: [biz1, biz2, biz3, biz4],
+    tech: ["Cisco Packet Tracer", "GRE Tunnel VPN", "Failover", "Subnetting"],
     icons: [<FaNetworkWired key="trouble" className="text-teal-600 text-xl" />],
     github: "",
     demo: "",
   },
+  {
+    title: "SimKAS - RT Cash Management System (RT 01 RW 11 SPR)",
+    desc: "Public financial transparency system for a neighborhood association, allowing residents to monitor cash flow in real-time without needing to log in.",
+    role: "Fullstack Developer",
+    functions: [
+      "Real-time public dashboard for cash in/out & current balance",
+      "Monthly & yearly period filter for transaction history",
+      "Summary cards for total income, expenses, and overall balance",
+      "Export financial reports to PDF and Excel",
+      "Admin panel with secure login for cash & member management",
+      "Announcement board for RT management messages",
+    ],
+    images: [
+      kasrt1,
+      kasrt6,
+      kasrt3,
+      kasrt4,
+      kasrt5,
+      kasrt2,
+      kasrt7,
+      kasrt8,
+      kasrt9,
+    ],
+    tech: ["PHP", "MySQL", "Tailwind CSS", "JavaScript"],
+    icons: [<FaUsers key="simkas" className="text-emerald-600 text-xl" />],
+    github: "",
+    demo: "",
+  },
+
+  // {
+  //   title: "Kas Alumni TKJ - Alumni Cash Management System (SMK Voctech 2)",
+  //   desc: "Transparent cash tracking system built for TKJ alumni of SMK Voctech 2 (Angkatan 2016), keeping every member updated on the shared fund with no login required.",
+  //   role: "Fullstack Developer",
+  //   functions: [
+  //     "Real-time global balance, total income & expense overview",
+  //     "Member payment status check for the current period",
+  //     "Share summary directly to WhatsApp group",
+  //     "Copy transaction summary as text with one click",
+  //     "Digital cash card with bank transfer details & copy-to-clipboard",
+  //     "Monthly & yearly transaction period filter",
+  //   ],
+  //   images: [kasAlumni1, kasAlumni2, kasAlumni3],
+  //   tech: ["PHP", "MySQL", "Tailwind CSS", "JavaScript"],
+  //   icons: [<FaMoneyBillWave key="alumni" className="text-orange-500 text-xl" />],
+  //   github: "",
+  //   demo: "https://uangkaskita.free.nf",
+  // },
 ];
 
 const Projects = () => {
