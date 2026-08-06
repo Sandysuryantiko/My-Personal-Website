@@ -34,7 +34,7 @@ import comp1 from "../assets/img/comp1.png";
 import comp2 from "../assets/img/comp2.PNG";
 import comp3 from "../assets/img/comp3.PNG";
 import comp4 from "../assets/img/comp4.PNG";
-import comp5 from "../assets/img/comp5.PNG";
+import comp5 from "../assets/img/comp5.png";
 
 const projects = [
   {
