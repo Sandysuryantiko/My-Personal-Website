@@ -17,10 +17,24 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import monitoring1 from "../assets/img/monitoring1.PNG";
-import monitoring2 from "../assets/img/monitoring2.PNG";
-import monitoring3 from "../assets/img/monitoring3.PNG";
-import monitoring4 from "../assets/img/monitoring4.PNG";
+import network0 from "../assets/img/network0.PNG";
+import network1 from "../assets/img/network1.PNG";
+import network2 from "../assets/img/network2.PNG";
+import network3 from "../assets/img/network3.PNG";
+import help1 from "../assets/img/help1.PNG";
+import help2 from "../assets/img/help2.PNG";
+import help3 from "../assets/img/help3.PNG";
+import help4 from "../assets/img/help4.PNG";
+import help5 from "../assets/img/help5.PNG";
+import help6 from "../assets/img/help6.PNG";
+import help7 from "../assets/img/help7.PNG";
+import help8 from "../assets/img/help8.PNG";
+import help9 from "../assets/img/help9.PNG";
+import comp1 from "../assets/img/comp1.PNG";
+import comp2 from "../assets/img/comp2.PNG";
+import comp3 from "../assets/img/comp3.PNG";
+import comp4 from "../assets/img/comp4.PNG";
+import comp5 from "../assets/img/comp5.PNG";
 
 const projects = [
   {
@@ -35,7 +49,7 @@ const projects = [
       "Applied ACL for traffic filtering and security",
       "Implemented HSRP for router redundancy & failover",
     ],
-    images: [monitoring1, monitoring2],
+    images: [network0, network1, network2, network3],
     tech: ["Cisco Packet Tracer", "VLAN", "OSPF", "ACL"],
     icons: [<FaNetworkWired key="net" className="text-teal-600 text-xl" />],
     github: "",
@@ -50,27 +64,13 @@ const projects = [
       "Simulated IT workflow with status updates",
       "User reporting and activity logs system",
     ],
-    images: [monitoring2],
+    images: [help1, help2, help3, help4, help5, help6, help7, help8, help9],
     tech: ["PHP", "Tailwind CSS", "MySQL"],
     icons: [<FaTools key="tools" className="text-gray-600 text-xl" />],
     github: "",
     demo: "",
   },
-  {
-    title: "Production Monitoring System",
-    desc: "Interactive web dashboard for monitoring real-time production operational data.",
-    role: "Fullstack Developer",
-    functions: [
-      "Real-time operational data monitoring",
-      "Interactive dashboard visualization",
-      "Data export and reporting system",
-    ],
-    images: [monitoring3],
-    tech: ["React.js", "Tailwind CSS", "JavaScript"],
-    icons: [<FaReact key="react" className="text-blue-500 text-xl" />],
-    github: "https://github.com/Sandysuryantiko/monitoring-produksi",
-    demo: "https://monitoringproduksi.netlify.app/",
-  },
+
   {
     title: "Company Profile Website",
     desc: "Responsive company profile website designed for legal and consulting services.",
@@ -80,7 +80,7 @@ const projects = [
       "Detailed service offering info",
       "Working contact & inquiry form",
     ],
-    images: [monitoring4],
+    images: [comp1, comp2, comp3, comp4, comp5],
     tech: ["HTML5", "CSS3", "JavaScript"],
     icons: [<SiHtml5 key="html" className="text-orange-500 text-xl" />],
     github: "https://github.com/Sandysuryantiko/Company-Profile-Website",
@@ -95,7 +95,7 @@ const projects = [
       "Corrected faulty NAT overload configurations",
       "Resolved misconfigured Inter-VLAN communication",
     ],
-    images: [monitoring1],
+    images: [network0, network1, network2, network3],
     tech: ["Troubleshooting", "Packet Tracer", "Subnetting"],
     icons: [<FaNetworkWired key="trouble" className="text-teal-600 text-xl" />],
     github: "",
