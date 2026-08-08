@@ -8,6 +8,7 @@ import {
   FaTools,
   FaTimes,
   FaUsers,
+  FaMoneyBillWave,
 } from "react-icons/fa";
 import {
   SiHtml5,
@@ -57,6 +58,9 @@ import kasrt6 from "../assets/img/kasrt6.PNG";
 import kasrt7 from "../assets/img/kasrt7.PNG";
 import kasrt8 from "../assets/img/kasrt8.PNG";
 import kasrt9 from "../assets/img/kasrt9.PNG";
+import tkj1 from "../assets/img/tkj1.PNG";
+import tkj2 from "../assets/img/tkj2.PNG";
+import tkj3 from "../assets/img/tkj3.PNG";
 
 const projects = [
   {
@@ -171,24 +175,30 @@ const projects = [
     demo: "",
   },
 
-  // {
-  //   title: "Kas Alumni TKJ - Alumni Cash Management System (SMK Voctech 2)",
-  //   desc: "Transparent cash tracking system built for TKJ alumni of SMK Voctech 2 (Angkatan 2016), keeping every member updated on the shared fund with no login required.",
-  //   role: "Fullstack Developer",
-  //   functions: [
-  //     "Real-time global balance, total income & expense overview",
-  //     "Member payment status check for the current period",
-  //     "Share summary directly to WhatsApp group",
-  //     "Copy transaction summary as text with one click",
-  //     "Digital cash card with bank transfer details & copy-to-clipboard",
-  //     "Monthly & yearly transaction period filter",
-  //   ],
-  //   images: [kasAlumni1, kasAlumni2, kasAlumni3],
-  //   tech: ["PHP", "MySQL", "Tailwind CSS", "JavaScript"],
-  //   icons: [<FaMoneyBillWave key="alumni" className="text-orange-500 text-xl" />],
-  //   github: "",
-  //   demo: "https://uangkaskita.free.nf",
-  // },
+  {
+    title: "Kas Alumni TKJ - Alumni Cash Management System (SMK Voctech 2)",
+    desc: "Transparent cash tracking system built for TKJ alumni of SMK Voctech 2 (Angkatan 2016), keeping every member updated on the shared fund with no login required.",
+    role: "Fullstack Developer",
+    functions: [
+      "Real-time global balance, total income & expense overview",
+      "Member payment status check for the current period",
+      "Share summary directly to WhatsApp group",
+      "Copy transaction summary as text with one click",
+      "Digital cash card with bank transfer details & copy-to-clipboard",
+      "Monthly & yearly transaction period filter",
+    ],
+    images: [tkj1, tkj2, tkj3],
+    tech: ["PHP", "MySQL", "Tailwind CSS", "JavaScript"],
+    icons: [
+      <FaMoneyBillWave key="alumni" className="text-orange-500 text-xl" />,
+      <SiPhp key="php" className="text-indigo-500 text-xl" />,
+      <SiMysql key="mysql" className="text-blue-500 text-xl" />,
+      <SiTailwindcss key="tailwind" className="text-sky-500 text-xl" />,
+      <SiCss3 key="css" className="text-blue-500 text-xl" />,
+    ],
+    github: "",
+    demo: "",
+  },
 ];
 
 const Projects = () => {
