@@ -133,8 +133,7 @@ const Skills = () => {
               {category.skills.map((skill, i) => (
                 <div
                   key={i}
-                  className="p-5 bg-gray-50 rounded-xl shadow-sm text-center text-gray-700 
-                  hover:shadow-md hover:scale-105 transform transition duration-300 flex flex-col items-center justify-center gap-2"
+                  className="card-lift p-5 bg-gray-50 rounded-xl shadow-sm text-center text-gray-700 flex flex-col items-center justify-center gap-2"
                 >
                   {skill.icon}
                   <span className="text-sm font-medium">{skill.name}</span>
