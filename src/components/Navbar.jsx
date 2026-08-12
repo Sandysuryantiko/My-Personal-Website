@@ -8,7 +8,14 @@ const Navbar = () => {
   // Update active section saat scroll
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["about", "skills", "experience", "projects"];
+      const sections = [
+        "about",
+        "skills",
+        "education",
+        "experience",
+        "projects",
+        "contact",
+      ];
       let current = "about";
 
       sections.forEach((id) => {

@@ -28,7 +28,7 @@ const Contact = () => {
           {/* EMAIL */}
           <a
             href="mailto:sandyscoproject@gmail.com"
-            className="flex items-center justify-center gap-2 px-5 py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs sm:text-sm font-semibold shadow-sm hover:shadow-md transition-all active:scale-95"
+            className="btn-shine flex items-center justify-center gap-2 px-5 py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs sm:text-sm font-semibold shadow-sm hover:shadow-md transition-all active:scale-95"
           >
             <FaEnvelope className="text-base" />
             <span>Email Me</span>
@@ -39,7 +39,7 @@ const Contact = () => {
             href="https://linkedin.com/in/Sandysuryantiko"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs sm:text-sm font-semibold shadow-sm hover:shadow-md transition-all active:scale-95"
+            className="btn-shine flex items-center justify-center gap-2 px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs sm:text-sm font-semibold shadow-sm hover:shadow-md transition-all active:scale-95"
           >
             <FaLinkedin className="text-base" />
             <span>LinkedIn</span>
@@ -50,7 +50,7 @@ const Contact = () => {
             href="https://github.com/Sandysuryantiko"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 px-5 py-3 bg-gray-900 hover:bg-black text-white rounded-xl text-xs sm:text-sm font-semibold shadow-sm hover:shadow-md transition-all active:scale-95"
+            className="btn-shine flex items-center justify-center gap-2 px-5 py-3 bg-gray-900 hover:bg-black text-white rounded-xl text-xs sm:text-sm font-semibold shadow-sm hover:shadow-md transition-all active:scale-95"
           >
             <FaGithub className="text-base" />
             <span>GitHub</span>

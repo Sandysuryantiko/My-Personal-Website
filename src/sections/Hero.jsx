@@ -76,13 +76,13 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a
               href="mailto:sandyscoproject@gmail.com"
-              className="px-6 py-3 bg-gray-800 text-white rounded-lg font-semibold hover:bg-gray-700 transition text-center"
+              className="btn-shine px-6 py-3 bg-gray-800 text-white rounded-lg font-semibold hover:bg-gray-700 transition text-center"
             >
               Contact
             </a>
             <a
               href="#projects"
-              className="px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition text-center"
+              className="btn-shine px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition text-center"
             >
               View Projects
             </a>
