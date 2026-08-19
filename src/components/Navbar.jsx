@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
@@ -52,18 +53,24 @@ const Navbar = () => {
         <ul className="hidden md:flex space-x-6">
           {navLinks.map((item) => {
             const id = item.toLowerCase();
+            const isActive = activeSection === id;
             return (
-              <li key={id}>
+              <li key={id} className="relative">
                 <a
                   href={`#${id}`}
                   className={`relative text-gray-700 hover:text-blue-600 transition ${
-                    activeSection === id
-                      ? "after:content-[''] after:block after:w-full after:h-[2px] after:bg-blue-600 after:mt-1"
-                      : ""
+                    isActive ? "text-blue-600" : ""
                   }`}
                 >
                   {item}
                 </a>
+                {isActive && (
+                  <motion.span
+                    layoutId="nav-underline"
+                    className="absolute left-0 right-0 -bottom-1 h-[2px] bg-blue-600"
+                    transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                  />
+                )}
               </li>
             );
           })}

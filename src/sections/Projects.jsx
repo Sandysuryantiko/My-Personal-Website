@@ -9,6 +9,7 @@ import {
   FaTimes,
   FaUsers,
   FaMoneyBillWave,
+  FaEye,
 } from "react-icons/fa";
 import {
   SiHtml5,
@@ -230,7 +231,7 @@ const Projects = () => {
           <div
             key={i}
             onClick={() => openModal(p)}
-            className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer overflow-hidden flex flex-col group"
+            className="card-lift bg-white rounded-xl shadow-sm border border-gray-100 cursor-pointer overflow-hidden flex flex-col group"
           >
             {/* Thumbnail */}
             <div className="relative w-full h-44 sm:h-48 overflow-hidden bg-gray-100">
@@ -239,6 +240,15 @@ const Projects = () => {
                 alt={p.title}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
+
+              {/* Overlay hover: gelap tipis + tombol View Details */}
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/45 transition-colors duration-300 flex items-center justify-center">
+                <span className="flex items-center gap-2 text-white text-xs font-semibold bg-white/15 backdrop-blur-md px-3.5 py-2 rounded-full border border-white/30 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                  <FaEye className="text-sm" />
+                  View Details
+                </span>
+              </div>
+
               <span className="absolute top-3 right-3 text-[11px] font-semibold bg-white/90 backdrop-blur-md text-gray-700 px-2.5 py-1 rounded-md shadow-sm">
                 {p.role}
               </span>
