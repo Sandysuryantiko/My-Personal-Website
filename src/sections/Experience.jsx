@@ -10,19 +10,19 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const experiences = [
-  {
-    id: 1,
-    role: "IT Support",
-    company: "PT Wirawan Group Corporation",
-    year: "2026 - Present",
-    description:
-      "Responsible for Active Directory management, Kerio Control firewall, Synology NAS backup routines, Print Server setup, VPN administration, and end-user IT support.",
-    images: [
-      "https://via.placeholder.com/600x400?text=IT+Support+Setup+1", // Ganti dengan path foto kamu (misal: /assets/img/exp1-1.jpg)
-      "https://via.placeholder.com/600x400?text=Network+Rack+Maintenance",
-      "https://via.placeholder.com/600x400?text=NAS+and+Server+Backup",
-    ],
-  },
+  // {
+  //   id: 1,
+  //   role: "IT Support",
+  //   company: "PT Wirawan Group Corporation",
+  //   year: "2026 - Present",
+  //   description:
+  //     "Responsible for Active Directory management, Kerio Control firewall, Synology NAS backup routines, Print Server setup, VPN administration, and end-user IT support.",
+  //   images: [
+  //     "https://via.placeholder.com/600x400?text=IT+Support+Setup+1", // Ganti dengan path foto kamu (misal: /assets/img/exp1-1.jpg)
+  //     "https://via.placeholder.com/600x400?text=Network+Rack+Maintenance",
+  //     "https://via.placeholder.com/600x400?text=NAS+and+Server+Backup",
+  //   ],
+  // },
   {
     id: 2,
     role: "Desktop Support Engineer (Freelance)",
