@@ -62,6 +62,16 @@ import kasrt9 from "../assets/img/kasrt9.PNG";
 import tkj1 from "../assets/img/tkj1.PNG";
 import tkj2 from "../assets/img/tkj2.PNG";
 import tkj3 from "../assets/img/tkj3.PNG";
+import subnet1 from "../assets/img/subnet1.PNG";
+import subnet2 from "../assets/img/subnet2.PNG";
+import subnet3 from "../assets/img/subnet3.PNG";
+import subnet4 from "../assets/img/subnet4.PNG";
+import subnet5 from "../assets/img/subnet5.PNG";
+import subnet6 from "../assets/img/subnet6.PNG";
+import subnet7 from "../assets/img/subnet7.PNG";
+import subnet8 from "../assets/img/subnet8.PNG";
+import subnet9 from "../assets/img/subnet9.PNG";
+import subnet10 from "../assets/img/subnet10.PNG";
 
 const projects = [
   {
@@ -199,6 +209,40 @@ const projects = [
     ],
     github: "",
     demo: "",
+  },
+  {
+    title: "VLSM Visualizer & Network Router Script Generator",
+    desc: "Enterprise-grade IP subnetting calculator equipped with automated MikroTik and Cisco IOS configuration script generators, database project management, and REST API endpoints.",
+    role: "Fullstack Developer",
+    functions: [
+      "Advanced VLSM calculation engine with CIDR auto-detection",
+      "Automated MikroTik and Cisco IOS configuration script generator",
+      "Secure multi-user authentication and cloud database project saving",
+      "Public RESTful API endpoint for headless subnetting integration",
+      "Professional PDF report printing via custom CSS print media",
+      "Interactive custom Tailwind modal for project management",
+    ],
+    images: [
+      subnet1,
+      subnet2,
+      subnet3,
+      subnet4,
+      subnet5,
+      subnet6,
+      subnet7,
+      subnet8,
+      subnet9,
+      subnet10,
+    ],
+    tech: ["PHP", "MySQL", "Tailwind CSS", "JavaScript"],
+    icons: [
+      <SiPhp key="php-vlsm" className="text-indigo-500 text-xl" />,
+      <SiMysql key="mysql-vlsm" className="text-blue-500 text-xl" />,
+      <SiTailwindcss key="tailwind-vlsm" className="text-sky-500 text-xl" />,
+      <SiJavascript key="js-vlsm" className="text-yellow-500 text-xl" />,
+    ],
+    github: "",
+    demo: "http://subnetvlsm.free.nf",
   },
 ];
 
