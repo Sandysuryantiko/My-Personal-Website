@@ -50,15 +50,14 @@ import biz1 from "../assets/img/biz1.PNG";
 import biz2 from "../assets/img/biz2.PNG";
 import biz3 from "../assets/img/biz3.PNG";
 import biz4 from "../assets/img/biz4.PNG";
-import kasrt1 from "../assets/img/kasrt1.PNG";
-import kasrt2 from "../assets/img/kasrt2.PNG";
-import kasrt3 from "../assets/img/kasrt3.PNG";
-import kasrt4 from "../assets/img/kasrt4.PNG";
-import kasrt5 from "../assets/img/kasrt5.PNG";
-import kasrt6 from "../assets/img/kasrt6.PNG";
-import kasrt7 from "../assets/img/kasrt7.PNG";
-import kasrt8 from "../assets/img/kasrt8.PNG";
-import kasrt9 from "../assets/img/kasrt9.PNG";
+import simkas0 from "../assets/img/simkas0.PNG";
+import simkas1 from "../assets/img/simkas1.PNG";
+import simkas2 from "../assets/img/simkas2.PNG";
+import simkas3 from "../assets/img/simkas3.PNG";
+import simkas4 from "../assets/img/simkas4.PNG";
+import simkas5 from "../assets/img/simkas5.PNG";
+import simkas6 from "../assets/img/simkas6.PNG";
+import simkas7 from "../assets/img/simkas7.PNG";
 import tkj1 from "../assets/img/tkj1.PNG";
 import tkj2 from "../assets/img/tkj2.PNG";
 import tkj3 from "../assets/img/tkj3.PNG";
@@ -163,15 +162,14 @@ const projects = [
       "Announcement board for RT management messages",
     ],
     images: [
-      kasrt1,
-      kasrt6,
-      kasrt3,
-      kasrt4,
-      kasrt5,
-      kasrt2,
-      kasrt7,
-      kasrt8,
-      kasrt9,
+      simkas0,
+      simkas1,
+      simkas2,
+      simkas3,
+      simkas4,
+      simkas5,
+      simkas6,
+      simkas7,
     ],
     tech: ["PHP", "MySQL", "Tailwind CSS", "JavaScript"],
     icons: [
