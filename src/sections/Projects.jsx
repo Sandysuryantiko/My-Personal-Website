@@ -95,7 +95,7 @@ const projects = [
       "Implemented HSRP for router redundancy & failover",
     ],
     images: [network0, network1, network2, network3],
-    tech: ["Cisco Packet Tracer", "VLAN", "OSPF", "ACL"],
+    tech: ["Cisco Packet Tracer", "VLAN", "OSPF", "ACL", "HSRP", "NAT"],
     icons: [<FaNetworkWired key="net" className="text-teal-600 text-xl" />],
     github: "",
     demo: "",
