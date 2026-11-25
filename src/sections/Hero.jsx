@@ -51,7 +51,7 @@ const Hero = () => {
 
           {/* Subjudul */}
           <h2 className="text-lg md:text-xl tracking-wide font-semibold text-gray-700 mb-5">
-            <b>IT Support | Network Infrastructure</b>
+            <b>IT Support | Network Infrastructure | Web Development</b>
           </h2>
 
           {/* Deskripsi */}

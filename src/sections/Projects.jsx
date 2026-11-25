@@ -19,6 +19,8 @@ import {
   SiJavascript,
   SiMysql,
   SiBootstrap,
+  SiDocker,
+  SiMariadb,
 } from "react-icons/si";
 
 // Import Swiper React components & styles
@@ -32,15 +34,14 @@ import network0 from "../assets/img/network0.PNG";
 import network1 from "../assets/img/network1.PNG";
 import network2 from "../assets/img/network2.PNG";
 import network3 from "../assets/img/network3.PNG";
-import help1 from "../assets/img/help1.PNG";
-import help2 from "../assets/img/help2.PNG";
-import help3 from "../assets/img/help3.PNG";
-import help4 from "../assets/img/help4.PNG";
-import help5 from "../assets/img/help5.PNG";
-import help6 from "../assets/img/help6.PNG";
-import help7 from "../assets/img/help7.PNG";
-import help8 from "../assets/img/help8.PNG";
-import help9 from "../assets/img/help9.PNG";
+import h1 from "../assets/img/h1.PNG";
+import h2 from "../assets/img/h2.PNG";
+import h3 from "../assets/img/h3.PNG";
+import h4 from "../assets/img/h4.PNG";
+import h5 from "../assets/img/h5.PNG";
+import h6 from "../assets/img/h6.PNG";
+import h7 from "../assets/img/h7.PNG";
+import h8 from "../assets/img/h8.PNG";
 import comp1 from "../assets/img/comp1.png";
 import comp2 from "../assets/img/comp2.PNG";
 import comp3 from "../assets/img/comp3.PNG";
@@ -50,14 +51,14 @@ import biz1 from "../assets/img/biz1.PNG";
 import biz2 from "../assets/img/biz2.PNG";
 import biz3 from "../assets/img/biz3.PNG";
 import biz4 from "../assets/img/biz4.PNG";
-import simkas0 from "../assets/img/simkas0.PNG";
-import simkas1 from "../assets/img/simkas1.PNG";
-import simkas2 from "../assets/img/simkas2.PNG";
-import simkas3 from "../assets/img/simkas3.PNG";
-import simkas4 from "../assets/img/simkas4.PNG";
-import simkas5 from "../assets/img/simkas5.PNG";
+
+import kas1 from "../assets/img/kas1.PNG";
+import kas2 from "../assets/img/kas2.PNG";
+import kas3 from "../assets/img/kas3.PNG";
+import kas4 from "../assets/img/kas4.PNG";
+import kas5 from "../assets/img/kas5.PNG";
+import kas6 from "../assets/img/kas6.PNG";
 import simkas6 from "../assets/img/simkas6.PNG";
-import simkas7 from "../assets/img/simkas7.PNG";
 import tkj1 from "../assets/img/tkj1.PNG";
 import tkj2 from "../assets/img/tkj2.PNG";
 import tkj3 from "../assets/img/tkj3.PNG";
@@ -71,6 +72,14 @@ import subnet7 from "../assets/img/subnet7.PNG";
 import subnet8 from "../assets/img/subnet8.PNG";
 import subnet9 from "../assets/img/subnet9.PNG";
 import subnet10 from "../assets/img/subnet10.PNG";
+import aset1 from "../assets/img/aset1.PNG";
+import aset2 from "../assets/img/aset2.PNG";
+import aset3 from "../assets/img/aset3.PNG";
+import aset4 from "../assets/img/aset4.PNG";
+import aset5 from "../assets/img/aset5.PNG";
+import aset6 from "../assets/img/aset6.PNG";
+import aset7 from "../assets/img/aset7.PNG";
+import aset8 from "../assets/img/aset8.PNG";
 
 const projects = [
   {
@@ -93,25 +102,29 @@ const projects = [
   },
   {
     title: "IT Helpdesk Ticketing System",
-    desc: "Web-based system designed to streamline and manage enterprise IT support requests.",
+    desc: "Multi-role helpdesk platform for IT support across a head office and branches, with real-time chat, SLA tracking, and device push notifications. Deployed live with Docker.",
     role: "Fullstack Developer",
     functions: [
-      "Ticket creation, priority assignment & tracking",
-      "Simulated IT workflow with status updates",
-      "User reporting and activity logs system",
+      "Role-based portals (user, IT, admin) with ticket tracking, photo evidence uploads, and live chat",
+      "SLA engine with working hours & holidays, IT scoping per branch, and satisfaction ratings",
+      "Real-time updates and Web Push notifications (Service Worker + VAPID)",
+      "Analytics: dominant issues per branch, monthly trends, and CSV export",
+      "Security hardening: login rate limiting, CSRF protection, CSP, session timeouts, and audit log",
+      "Containerized with Docker and published through a Cloudflare Tunnel",
     ],
-    images: [help1, help2, help3, help4, help5, help6, help7, help8, help9],
-    tech: ["PHP", "Tailwind CSS", "MySQL"],
+    images: [h1, h2, h3, h4, h5, h6, h7, h8],
+    tech: ["PHP", "MySQL", "Tailwind CSS", "JavaScript", "Docker"],
     icons: [
       <SiPhp key="php" className="text-indigo-500 text-xl" />,
       <SiMysql key="mysql" className="text-blue-500 text-xl" />,
       <SiTailwindcss key="tailwind" className="text-sky-500 text-xl" />,
+      <SiJavascript key="js" className="text-yellow-500 text-xl" />,
+      <SiDocker key="docker" className="text-sky-600 text-xl" />,
     ],
 
     github: "",
-    demo: "",
+    demo: "https://helpdesk.cocowsan.my.id",
   },
-
   {
     title: "Company Profile Website",
     desc: "Responsive company profile website designed for legal and consulting services.",
@@ -161,16 +174,7 @@ const projects = [
       "Admin panel with secure login for cash & member management",
       "Announcement board for RT management messages",
     ],
-    images: [
-      simkas0,
-      simkas1,
-      simkas2,
-      simkas3,
-      simkas4,
-      simkas5,
-      simkas6,
-      simkas7,
-    ],
+    images: [kas1, kas2, kas3, kas4, kas5, kas6, simkas6],
     tech: ["PHP", "MySQL", "Tailwind CSS", "JavaScript"],
     icons: [
       <FaUsers key="simkas" className="text-emerald-600 text-xl" />,
@@ -241,6 +245,30 @@ const projects = [
     ],
     github: "",
     demo: "http://subnetvlsm.free.nf",
+  },
+  {
+    title: "IT Asset Management System",
+    desc: "Web-based IT asset management platform for tracking hardware inventory across multiple sites, with role-based access, full activity logging, and a containerized production deployment behind Cloudflare Tunnel.",
+    role: "Fullstack Developer & DevOps",
+    functions: [
+      "Centralized asset inventory with categories, multi-site support, and detailed asset history",
+      "Role-based access control with secure authentication, login lockout, and session timeout",
+      "Activity log that records logins, user changes, and data deletions for auditing",
+      "Reporting and export of asset data using PhpSpreadsheet and Dompdf",
+      "Dockerized stack (PHP-Apache, MariaDB) deployed with Portainer, with automatic database migrations",
+      "Automated daily database backups and a health endpoint monitored by Uptime Kuma",
+    ],
+    images: [aset1, aset2, aset3, aset4, aset5, aset6, aset7, aset8],
+    tech: ["PHP", "MariaDB", "Docker", "Tailwind CSS", "JavaScript"],
+    icons: [
+      <SiPhp key="php-asset" className="text-indigo-500 text-xl" />,
+      <SiMariadb key="mariadb-asset" className="text-blue-700 text-xl" />,
+      <SiDocker key="docker-asset" className="text-sky-500 text-xl" />,
+      <SiTailwindcss key="tailwind-asset" className="text-sky-400 text-xl" />,
+      <SiJavascript key="js-asset" className="text-yellow-500 text-xl" />,
+    ],
+    github: "",
+    demo: "https://aset.cocowsan.my.id",
   },
 ];
 
