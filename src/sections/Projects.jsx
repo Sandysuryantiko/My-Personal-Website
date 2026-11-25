@@ -52,7 +52,7 @@ import biz2 from "../assets/img/biz2.PNG";
 import biz3 from "../assets/img/biz3.PNG";
 import biz4 from "../assets/img/biz4.PNG";
 
-import kas1 from "../assets/img/kas1.PNG";
+import kas1 from "../assets/img/kas1.png";
 import kas2 from "../assets/img/kas2.PNG";
 import kas3 from "../assets/img/kas3.PNG";
 import kas4 from "../assets/img/kas4.PNG";
